@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)chrome-extension://ibjbdljnechfamiabmolmojegeindnpc/snapshot/snapshot.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>Snapshots</title>
+
+  <link rel="stylesheet" type="text/css" href="chrome-extension://ibjbdljnechfamiabmolmojegeindnpc/snapshot/heatmap-player.min.css">
+  <link rel="stylesheet" type="text/css" href="chrome-extension://ibjbdljnechfamiabmolmojegeindnpc/snapshot/vendor/select2.min.css">
+
+  <style>
+  html {
+    overflow-x: hidden;
+  }
+
+  .select2-container--classic .select2-results>.select2-results__options,
+  .select2-container--default .select2-results>.select2-results__options {
+    max-height: 70px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #close-sidebar {
+    position: absolute;
+    right: 27px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 23123123;
+  }
+
+  .select2-container .select2-search--inline .select2-search__field {
+    margin-top: 12px;
+    padding-left: 5px;
+  }
+
+  ._vwo-heatmap-observation .select2-container--default .select2-selection--multiple {
+    border-radius: 3px;
+    min-height: 44px;
+    border: 1px solid #d9dde1;
+  }
+
+  ._vwo-heatmap-observation .select2-container--default .select2-selection--multiple .select2-selection__choice .select2-selection__choice__remove {
+    position: absolute;
+    right: 5px;
+    font-size: 14px;
+    color: #646D82;
+    font-weight: lighter;
+    top: 6px;
+  }
+
+  ._vwo-heatmap-observation .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #F7F7F7;
+    height: 32px;
+    border-radius: 4px;
+    color: #646D82;
+    border: none;
+    padding: 7px 20px;
+    position: relative;
+    font-size: 13px;
+  }
+
+  ._vwo-heatmap-observation .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: 1px solid #298ee9;
+  }
+
+  .select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #fff;
+    color: #ddd;
+  }
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+  max-height: 39px;
+  overflow-y: overlay;
+}
+
+  </style>
+</head>
+
+<body style="display: block;">
+  <div class="hidden">
+    <!-- Tag Icon -->
+    <svg id="icon--tag" width="12px" height="12px" viewBox="0 0 12 12">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1129.000000, -930.000000)" fill="#788290">
+          <path d="M1140.70912,936.37628 L1135.0457,930.720793 C1134.84497,930.519989 1134.57573,930.349757 1134.23779,930.209877 C1133.89974,930.069968 1133.59085,930 1133.31095,930 L1130.01587,930 C1129.74124,930 1129.50362,930.100402 1129.30296,930.300957 C1129.10229,930.501623 1129.002,930.739243 1129.002,931.013872 L1129.002,934.308947 C1129.002,934.58882 1129.07188,934.897628 1129.21185,935.235678 C1129.35181,935.573727 1129.52207,935.840255 1129.72279,936.035705 L1135.38613,941.707033 C1135.58153,941.902428 1135.81898,942.000111 1136.09905,942.000111 C1136.37342,942.000111 1136.6139,941.902428 1136.81981,941.707033 L1140.70901,937.80996 C1140.9044,937.614482 1141.002,937.377056 1141.002,937.097156 C1141.002,936.822555 1140.9044,936.582272 1140.70912,936.37628 L1140.70912,936.37628 Z M1132.25349,933.251519 C1132.05535,933.449549 1131.81648,933.54862 1131.53658,933.54862 C1131.25679,933.54862 1131.01781,933.449549 1130.81978,933.251519 C1130.62175,933.053461 1130.52277,932.814593 1130.52277,932.53472 C1130.52277,932.25482 1130.62175,932.015869 1130.81978,931.817922 C1131.01784,931.619864 1131.25679,931.520793 1131.53658,931.520793 C1131.81648,931.520793 1132.05543,931.619864 1132.25349,931.817922 C1132.45144,932.015869 1132.55051,932.254848 1132.55051,932.53472 C1132.55051,932.814593 1132.45155,933.053461 1132.25349,933.251519 L1132.25349,933.251519 Z" id="Shape"></path>
+        </g>
+      </g>
+    </svg>
+
+    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="icon--cross" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="Icons/Black/cross">
+          <path d="M13.4142136,12 L18.363961,7.05025253 C18.7544853,6.65972824 18.7544853,6.02656326 18.363961,5.63603897 C17.9734367,5.24551468 17.3402718,5.24551468 16.9497475,5.63603897 L12,10.5857864 L7.05025253,5.63603897 C6.65972824,5.24551468 6.02656326,5.24551468 5.63603897,5.63603897 C5.24551468,6.02656326 5.24551468,6.65972824 5.63603897,7.05025253 L10.5857864,12 L5.63603897,16.9497475 C5.24551468,17.3402718 5.24551468,17.9734367 5.63603897,18.363961 C6.02656326,18.7544853 6.65972824,18.7544853 7.05025253,18.363961 L12,13.4142136 L16.9497475,18.363961 C17.3402718,18.7544853 17.9734367,18.7544853 18.363961,18.363961 C18.7544853,17.9734367 18.7544853,17.3402718 18.363961,16.9497475 L13.4142136,12 Z" id="Combined-Shape"></path>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div data-qa="btn-close-side-panel" id="close-sidebar" class="_vwo-heatmap-observation">
+    <svg width="18" height="18" viewBox="0 0 22 22" title="Close Panel" class="icon--cross  mr-2  grey-cross">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon--cross"></use>
+    </svg>
+  </div>
+
+  <div id="observation-view-box" class="_vwo-heatmap-observation">
+    <div id="create-observation-tile" class="snapshot-modal">
+      <form id="create-observation-form" data-mode="create" type="multipart/form-data" class="cf">
+        <div class="input-group">
+          <label class="text-label  font-16  normal" id="sidebar-text">Add Observation</label>
+          <!-- Description -->
+          <textarea id="create-observation-description" class="textarea" rows="4" type="textarea" maxlength="200" placeholder="Eg. Visitors are not clicking on the banner" name="description"></textarea>
+          <div id="form-data-error" class="milli--odd float--left text--danger hidden">*Required</div>
+          <div id="observation-character-limit" class="milli--odd  text--right">200 characters remaining</div>
+        </div>
+        <!--Page URL-->
+        <div class="input-group" style="display:none;">
+          <label class="text-label">Page URL</label>
+          <input class="text-input" id="create-observation-page-url">
+        </div>
+        <div id="create-observation-labels-container" class="input-group">
+          <!-- Label -->
+          <label class="text-label">Labels</label>
+          <select class="js-example-tags input-group select2-hidden-accessible" multiple="" id="create-observation-labels" tabindex="-1" aria-hidden="true" data-select2-id="create-observation-labels"></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="2" style="width: 8px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="Separate labels with comma" style="width: 380px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+          <input type="hidden" name="data" id="create-observation-form-data">
+        </div>
+
+        <div class="push-15--top  cf  float--right" id="create-observation-form-container" style="display: inline-block;">
+          <button type="button" class="btn  snapshot-submit-btn  mr-20" id="create-observation-form-cancel">Cancel</button>
+          <button type="submit" class="btn  btn--primary  snapshot-submit-btn" id="create-observation-form-submit">
+            <span class="icon  loader  hidden"></span> Add
+          </button>
+        </div>
+
+        <div class="push-15--top  cf  full-width  hidden" id="edit-observation-form-container" style="display: none;">
+          <button type="submit" class="btn  btn--positive  float--right" id="edit-observation-form-save">
+            <span class="icon  loader  hidden"></span> Save Changes
+          </button>
+          <button type="button" class="btn  btn--danger inverted  float--right  mr-20" id="edit-observation-form-delete">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- <div id="observations-list" class="soft scrollable scrollable--small  _vwo-heatmap-observation"></div> -->
+
+  <script type="text/javascript" src="chrome-extension://ibjbdljnechfamiabmolmojegeindnpc/snapshot/vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="chrome-extension://ibjbdljnechfamiabmolmojegeindnpc/snapshot/vendor/select2.min.js"></script>
+  <script type="text/javascript" src="chrome-extension://ibjbdljnechfamiabmolmojegeindnpc/snapshot/main.js"></script>
+
+
+
+</body></html>
